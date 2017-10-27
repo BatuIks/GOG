@@ -1,0 +1,20 @@
+{
+    "collab_server" : "",
+    "contents" : "install.packages(\"MASS\")\n\nucv(geyser$duration) \n\nbcv(geyser$duration) \nwidth.SJ(geyser$duration)\nwidth.SJ(geyser$duration, method = \"dpi\")\n\nd <- density(geyser$duration, ucv(geyser$duration)) \nplot(d)\nlibrary(MASS)\nsetwd(\"~/Pobrane\")\nload(\"cw2.RData\")\n\ndata <- geyser$duration\n\ncompareDensEst <- function(data, kernel = kernel){\n  par(mfrow = c(2,2))\n  d <- density(data, bw = ucv(data), kernel = kernel) \n  plot(d, main = \"ucv\")\n  d <- density(data, bw = bcv(data), kernel = kernel)\n  plot(d, main = \"bcv\")\n  d <- density(data, bw = width.SJ(data), kernel = kernel)\n  plot(d, main = \"width.JS\")\n  d <- density(data, bw = width.SJ(data), method = \"dpi\", kernel = kernel)\n  plot(d, main = \"widht.JS + dpi\")\n}\n\ncompareDensEst\n#zad1\ncompareDensEst(data, \"gaussian\")\n#zad2\ncompareDensEst(hildago, \"rectangular\")\n#zad3\n\nreszta <- function(N){\n  k <- sample(0:4, N, replace = TRUE)\n  result <- rnorm(N, mean(k/2), sd =1)\n  return(result)\n}\nreszta(5)\nn <- 100000\nifelse(c(TRUE, FALSE, TRUE), c(1,2,3), c(\"x\",\"y\",\"z\"))\nmySample <- ifelse(runif(n)<.5,rnorm(n), reszta(n))\n\ncompareDensEst(mySample, \"gaussian\")\n\n#zad4\ncompareDensEst(ushighways$Approx.Miles, \"rectangular\")",
+    "created" : 1507895043432.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1826012528",
+    "id" : "FBB4F676",
+    "lastKnownWriteTime" : 1507881153,
+    "last_content_update" : 1507881153,
+    "path" : "~/Pulpit/Studia/Statystyka/Statystyczna analiza danych/stata s2e2/stat s2e2.R",
+    "project_path" : "stat s2e2.R",
+    "properties" : {
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

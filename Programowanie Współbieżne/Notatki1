@@ -1,0 +1,24 @@
+1. Systemy wielozadaniowe zajmują się współdziałaniem procesów, współbieżnym wykonywaniem procesów
+	Następuje przełączanie kontekstowe między procesami przy zachowaniu stanów
+2. Czym jest kontekst?
+3. W każdym procesie jest wykonywany co najmniej jeden wątek
+4. w systemach wielowątkowych w procesie równocześnie może wykonywać się wiele wątków
+	wszystkie one wykonują się w tej samej przestrzeni adresowej procesu
+5. Def: 
+	proces - realizacja programu, ma przydzielane własne zasoby i kontekst
+	wątek - ciąg instrukcji wykonujacych się w obrębie pewnego procesu, korzysta z zasobów 			procesu
+	przestrzeń adresowa - mapa możliwej do zaadresownia przez proces pamięci(nie koniecznie w 			pamięci fizycznej, to może być też pamięć virtualna)
+	czas procesora - 
+	kontekst procesu - wszystkie informacje potrzebne do wznowienia zawieszonego wcześniej 			procesu. 
+	niespójność danych - 
+6. przekazanie procesora innemu wątkowy w obrębie tego samego procesu może być wykonane szybciej niż przełączanie kontekstu między różnymi procesami
+7. Podsumowanie:
+	Zalety:
+	 - szybszy dostęp do wspólnych zasobów
+	Wady:
+	 - brak ochrony danych przez wątki działające jednocześnie na tych samych danych
+	 - niespójność danych (konieczne są metody synchronizacji w dostępie wątków do tych danych)
+
+8. Wątki uruchomione na jednym procesorze są szybko przełączane między sobą co sprawia wrażenie równoległego wykonywania
+
+9.Thread.sleep(1000) - czekaj jedną sekundę

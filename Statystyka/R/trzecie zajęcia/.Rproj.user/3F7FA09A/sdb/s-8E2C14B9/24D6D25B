@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1508318606023.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "24D6D25B",
+    "lastKnownWriteTime" : 4294967297,
+    "last_content_update" : 1508318606023,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "3A9DC843",
+        "caption" : "nowaM",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=nowaM&cache_key=3A9DC843",
+        "displayedObservations" : 20,
+        "environment" : "",
+        "object" : "nowaM",
+        "preview" : 0,
+        "totalObservations" : 20,
+        "variables" : 4
+    },
+    "relative_order" : 4,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

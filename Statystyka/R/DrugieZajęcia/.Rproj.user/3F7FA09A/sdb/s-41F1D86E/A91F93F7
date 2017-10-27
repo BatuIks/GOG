@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "macierz = matrix(1:12,3,4)\n\nzamiana = function(macierz){\n  a = macierz[1,1]\n  b = macierz[length(macierz[,1]),length(macierz[1,])]\n\n  macierz[length(macierz[,1]),length(macierz[1,])] = a\n  macierz[1,1] = b\n  return(macierz)\n}\n\nb = macierz[length(macierz[,1]),length(macierz[1,])]\n\nc = zamiana(tab)\ndim(tab)\n\nmac = matrix(1:15, nrow = 5)\n\n\nsrednie = 1:5\nfor(i in 1:5){\n  srednie[i] = mean(mac[i,])\n}\nsred = srednie\n\n\n?apply()\n\n\napply(mac, 2, mean) #apply(macierz, 1 - po wierszach, 2 - kolumnach, funkcja na nich stosowa)\n\ncolMeans(mac)\nrowMeans(mac)\n?rnorm #generuje n elementów rozkładu normalnego\n\nx = rnorm(100,10,2)\ny = x + rnorm(100)\n\n?plot() #wykresik\n\nplot(x,y)\ntabela = data.frame(x,y)\n\ncor(tab)\n\nlibrary(\"Hmisc\")\nrcorr(as.matrix(tab))\n#ggplot - pakiet do ogarnięcia\n\nx <- rnorm(100,sd = 3)\ny <- x^2 + rnorm(100)\nplot(x,y)\ncor(x,y)\n\nlibrary(\"Hmisc\")\nrcorr(x,y)",
+    "created" : 1507709586173.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3541321491",
+    "id" : "A91F93F7",
+    "lastKnownWriteTime" : 1507712471,
+    "last_content_update" : 1507712471767,
+    "path" : "~/Pulpit/Studia/Statystyka/DrugieZajęcia/dd.R",
+    "project_path" : "dd.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

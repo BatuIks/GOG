@@ -1,0 +1,2 @@
+1. zmienna volatile zapobiega optymalizowaniu(uproszczeniu) programu przez kompilator
+2. współbieżna redukcja

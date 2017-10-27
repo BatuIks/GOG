@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "dane = read.csv(\"/home/user/Pobrane/NPAS-data.csv\")\n\n#age + education\n",
+    "created" : 1508317965901.000,
+    "dirty" : true,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "1139913313",
+    "id" : "E931AC1D",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1508318546676,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

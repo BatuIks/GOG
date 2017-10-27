@@ -1,0 +1,5 @@
+1. korzystaliśmy z pakietu java.util.concurrent, braliśmy wcześniej z tego pakietu klasę Semaphore (concurrent - równoczesny)
+2. pakiet ten oferuje również klasy takie jak:
+ - Cyclic Barrier która stawia bariere dla n wątków przy konstruktorze CyclicBarrier(int parties), wątek sygnalizuje osiągnięcie bariery metodą
+	int await(), jest rownież konstruktor który po osiągnięciu Bariery przez wszystkie wątki wykona akcję CyclicBarrier(int parties,Runnable barrierAction)
+ -

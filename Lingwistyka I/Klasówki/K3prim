@@ -1,0 +1,172 @@
+1. Zdefiniuj gramatykę najprostszego możliwego typu dla następujących
+języków (czyli, o ile się da, ściśle prawostronnie liniową, a jeżeli
+się nie da, to bezkontekstową) i możliwie najkrótszą (ale prosty typ
+ważniejszy od długości).
+
+
+1a – język regularny
+
+((ab)+|(cd)+)*  (= (ab|cd)*)
+
+A –> ε
+A –> a B
+B –> b A
+A –> c C
+C –> d A
+
+((ac)+|(bd)+)*  (= (ac|bd)*)
+
+A –> ε
+A –> a B
+B –> c A
+A –> b C
+C –> d A
+
+
+1b – język regularny
+
+a^n b^m c^r : n>=0, m>=1, r>=2  (= a*b+cc+)
+
+A –> a A
+A –> b B
+B –> b B
+B –> c C
+C –> c D
+D –> c D
+D –> ε
+
+a^n b^m c^r : n>=0, m>=2, r>=1  (= a*bb+c+)
+
+A –> a A
+A –> b B
+B –> b C
+C –> b C
+C –> c D
+D –> c D
+D –> ε
+
+
+1c – język (ściśle) bezkontekstowy
+
+a^n b^m c^r: r >= n+m
+
+A –> ε
+A –> A c
+A –> a A c
+A –> b B c
+B –> b B c
+B –> ε
+
+Jeszcze krócej (za taką wersję był dodatkowy punkt):
+
+A –> A c
+A –> a A c
+A –> B
+B –> b B c
+B –> ε
+
+a^n b^m c^r: n >= m+r
+
+A –> ε
+A –> a A
+A –> a A c
+A –> a B b
+B –> a B b
+B –> ε
+
+Krócej (za taką wersję był dodatkowy punkt):
+
+A –> a A
+A –> a A c
+A –> B
+B –> a B b
+B –> ε
+
+1d – język regularny
+
+(a+(ba+c)*)+
+
+A –> a B
+B –> a B
+B –> ε
+B –> b C
+C –> a D
+D –> a D
+D –> c B
+
+
+(a+(b+ac)*)+
+
+A –> a B
+B –> a B
+B –> ε
+B –> b C
+C –> b C
+C –> a D
+D –> c B
+
+
+
+2. Podaj najkrótsze (w sensie liczby znaków) wyrażenie regularne
+definiujące ten sam język co następująca gramatyka regularna.
+
+A –> a A
+A –> a B
+B –> ε
+B –> b C
+C –> b C
+C –> a D
+D –> c E
+E –> c E
+E –> ε
+E –> a A
+E –> a B
+
+(a(b+ac+)?)+  – 12 znaków (5 punktów)
+(a|ab+ac+)+   — 11 znaków
+
+A –> a A
+A –> a B
+B –> ε
+B –> b C
+C –> a D
+D –> a D
+D –> c E
+E –> c E
+E –> ε
+E –> a A
+E –> a B
+
+(a(ba+c+)?)+  – 12 znaków (5 punktów)
+(a|aba+c+)+   — 11 znaków
+
+
+======================================================================
+
+
+Można było dostać 5 x 5 = 25 punktów.
+
+Klucz do zadania 1:
+
+– gramatyka generująca zły język: 0 punktów (w wyjątkowych wypadkach
+  więcej, ale najwyżej 2)
+
+– gramatyka złego typu generująca właściwy język: 3 punkty za
+  bezkontekstową zamiast regularnej, 4 punkty za prawostronnie liniową
+  zamiast ŚCIŚLE prawostronnie liniowej
+
+– gramatyka dobrego typu generująca dobry język ale dłuższa niż to
+  było potrzebne: 4
+
+– jeżeli zachodzą oba powyższe (zły typ i w dodatku za długa) to
+  minimum z powyższych dwóch minus 1 punkt
+
+Klucz do zadania 2:
+
+– wyrażenie regularne generujące zły język: 0 punktów (ew. do 2 za
+  istotne elementy dobrego rozwiązania)
+
+– wyrażenie regularne generujące dobry język ale dłuższe niż to było
+  potrzebne: 4 punkty
+
+

@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1507709783254.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "CD02FF4",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1507709783254,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "DB58CF09",
+        "caption" : "mac",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=mac&cache_key=DB58CF09",
+        "displayedObservations" : "5",
+        "environment" : "",
+        "object" : "mac",
+        "preview" : "0",
+        "totalObservations" : "5",
+        "variables" : "3"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

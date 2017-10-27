@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1507876901383.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "1DA84F5A",
+    "lastKnownWriteTime" : 0,
+    "last_content_update" : 1507876901383,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "A4FB7C29",
+        "caption" : "ushighways",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=ushighways&cache_key=A4FB7C29",
+        "displayedObservations" : "221",
+        "environment" : "",
+        "object" : "ushighways",
+        "preview" : "0",
+        "totalObservations" : "221",
+        "variables" : "4"
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

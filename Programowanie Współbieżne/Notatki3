@@ -1,0 +1,18 @@
+1. Semaphore w javie jest obiektem posiadającym pewną liczbę pozwoleń które udostęniane są wątkom. Jeżeli pozwolenie jest dostępne (wartość semaphora jest dodatnia), to semaphore przepuszcza wątek jezeli ten chcee przejść i zmiejsza liczbę pozwoleń semaphore'a o jeden.
+O ile liczba pozwoleń semaphore'a jest zerowa, to wątek czeka na pozwolenie od semaphore na wykonanie.
+
+2. Konstruktor w Javie wygląda tak Semaphore(int i,boolean que), gdzie "i" to liczba pozwoleń początkowych Semaphore'a,DEFAULTowo jest stosem?
+semafor silny - semafor z kolejką
+
+3. metody Semapthore'a:
+ acquire - pozwolenie na uzyskanie dostępu
+ release - zabranie dostępu watkowi
+ALBO
+	wersja z liczbą pozwoleń 
+	acquire()
+	release()
+PO CO JEDNEMU WATKOWI WIELE POZWOLEŃ?
+
+4. exclusion - wykluczenie
+
+5. semafor siln

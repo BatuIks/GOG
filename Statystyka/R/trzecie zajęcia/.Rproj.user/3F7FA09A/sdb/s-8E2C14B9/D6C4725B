@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "#zad1\n#proszę stworzyć macierz o wymiarach 50 na 4 składającą się z liczb z przedziału od -1 do 1\nx = runif(200, -1, 1)\nm = matrix(x , nrow = 50, ncol = 4)\n\n#zad2\n#prosze zamienic miejscami dwie kolumny w stworzonej macierzy\nq = m[,1]\nm[,1] = m[,2]\nm[,2] = q\n\nm[,c(1,2)]<\n#zad3\n#prosze zamienic wartosci jednej kolumn na sinusy tych wartosci\nm[,2] = sin(m[,2])\n\n#zad4\n#proszę zamienic macierz na data frame oraz nazwać kolumny\ndata1 = data.frame(m)\ncolnames(data1) <- c(\"col1\", \"col2\", \"col3\", \"col4\")\n\n#zad5\n#prosze stworzyc dodatkową kolumnę będącą sumą wartości dla każdego wiersza\nm1 = cbind(m, apply(m, 1, sum))\n\n#ewentualnie\nm1$sumy<-rawSums(m1)\n#zad6\n#prosze stworzyc nowy obiekt składający się z tych wierszy początkowej macierzy, w których \n#wartość w pierwszej kolumnie jest większa od zera\nnowaM = c()\n\nfor(i in 1:length(m[,1])){\n  if(m[i,1] > 0){\n    nowaM = rbind(nowaM,m[i,])\n  }\n}\n\nm2 <- m1[which(m[])]",
+    "created" : 1508314357560.000,
+    "dirty" : true,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "4075680872",
+    "id" : "D6C4725B",
+    "lastKnownWriteTime" : 1508317960,
+    "last_content_update" : 1508318599748,
+    "path" : "~/Pulpit/Studia/Systemy Decyzyjne/trzecie zajęcia/trzeciezaj.R",
+    "project_path" : "trzeciezaj.R",
+    "properties" : {
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

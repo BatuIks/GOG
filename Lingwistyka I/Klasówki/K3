@@ -1,0 +1,241 @@
+1. Zdefiniuj gramatykę najprostszego możliwego typu dla następujących
+języków (czyli, o ile się da, ściśle prawostronnie liniową, a jeżeli
+się nie da, to bezkontekstową) i możliwie najkrótszą (ale prosty typ
+ważniejszy od długości).
+
+
+1a – język regularny
+
+(a|(bc)+)*   (= (a|bc)*)
+
+A –> ε
+A –> a A
+A –> b B
+B –> c A
+
+(a+|(bc))*   (= (a|bc)*)
+
+A –> ε
+A –> a A
+A –> b B
+B –> c A
+
+((ab)|c+)*   (= (ab|c)*)
+
+A –> ε
+A –> c A
+A –> a B
+B –> b A
+
+((ab)+|c)*   (= (ab|c)*)
+
+A –> ε
+A –> c A
+A –> a B
+B –> b A
+
+
+1b – język regularny
+
+a b^n c^m : n>=0, m>=2   (= ab*cc+)
+
+A –> a B
+B –> b B
+B –> c C
+C –> c D
+D –> c D
+D –> ε
+
+a^n b^m c : n>=0, m>=2   (= a*bb+c)
+
+A –> a A
+A –> b B
+B –> b C
+C –> b C
+C –> c D
+D –> ε
+
+a^n b c^m : n>=2, m>=0   (= aa+bc*)
+
+A –> a B
+B –> a C
+C –> a C
+C –> b D
+D –> c D
+D –> ε
+
+a^n b c^m : n>=0, m>=2   (= a*bcc+)
+
+A –> a A
+A –> b B
+B –> c C
+C –> c D
+D –> c D
+D –> ε
+
+
+1c – język (ściśle) bezkontekstowy
+
+a^(n+m) b^n c^m
+
+A –> ε
+A –> a A c
+A –> a B b
+B –> ε
+B –> a B b
+
+a^n b^m c^(n+m)
+
+A –> ε
+A –> a A c
+A –> b B c
+B –> ε
+B –> b B c
+
+jeszcze lepiej (Katarzyna Pyrtek):
+
+A –> a A c
+A –> B
+B –> b B c
+B –> ε
+
+(analogicznie wcześniejsza wersja 1c?)
+
+a^(2n) b^(n+m) c^(m)
+
+A –> B C
+B –> ε
+B –> a a B b
+C –> ε
+C –> b C c
+
+a^n b^(n+m) c^(2m)
+
+A –> B C
+B –> ε
+B –> a B b
+C –> ε
+C –> b C c c
+
+
+1d – język regularny
+
+((a+b+c)*b)*
+
+A –> ε
+A –> b A
+A –> a B
+B –> a B
+B –> b C
+C –> b C
+C –> c D
+D –> a B
+D –> b A
+
+(9 reguł)
+
+(b+(a+b+c)*)+
+
+A –> b B
+B –> b B
+B –> ε
+B –> a C
+C –> a C
+C –> b D
+D –> b D
+D –> c B
+
+(8 reguł)
+
+
+2. Podaj najkrótsze (w sensie liczby znaków) wyrażenie regularne
+definiujące ten sam język co następująca gramatyka regularna.
+
+A –> a B
+B –> a B
+B –> c C
+B –> ε
+C –> c C
+C –> a D
+D –> a D
+D –> b B
+
+a(a|c+a+b)*    (11 znaków) – 5 punktów
+a+(c+a+ba*)*   (12 znaków) – 4 punkty
+(a+(c+a+b)*)+  (13 znaków) – 4 punkty
+dobrze ale więcej znaków – 3 punkty
+
+A –> a C
+B –> c B
+B –> a D
+C –> a C
+C –> c B
+C –> ε
+D –> a D
+D –> b C
+
+a(a|c+a+b)*    (11 znaków) – 5 punktów
+a+(c+a+ba*)*   (12 znaków) – 4 punkty
+(a+(c+a+b)*)+  (13 znaków) – 4 punkty
+dobrze ale więcej znaków – 3 punkty
+
+
+A –> ε
+A –> b A
+A –> c B
+B –> c B
+B –> b C
+C –> b C
+C –> a D
+D –> c B
+D –> b A
+
+((c+b+a)*b)*   (12 znaków) — 5 punktów
+(b|(c+b+a)+b)* (14 znaków) – 4 punkty
+(b*(c+b+a)*b)* (14 znaków) – 4 punkty
+dobrze ale więcej znaków – 3 punkty
+
+A –> ε
+A –> b A
+A –> c C
+B –> b B
+B –> a D
+C –> c C
+C –> b B
+D –> c C
+D –> b A
+
+((c+b+a)*b)*   (12 znaków) — 5 punktów
+(b|(c+b+a)+b)* (14 znaków) – 4 punkty
+(b*(c+b+a)*b)* (14 znaków) – 4 punkty
+dobrze ale więcej znaków – 3 punkty
+
+
+======================================================================
+
+
+Można było dostać 5 x 5 = 25 punktów.
+
+Klucz do zadania 1:
+
+– gramatyka generująca zły język: 0 punktów
+
+– gramatyka złego typu generująca właściwy język: 2 punkty za
+  bezkontekstową zamiast regularnej, 3 punkty za prawostronnie liniową
+  zamiast ŚCIŚLE prawostronnie liniowej
+
+– gramatyka dobrego typu generująca dobry język ale dłuższa niż to
+  było potrzebne: 3 (jeżeli dłuższa o więcej niż jedną regułę) lub 4
+  punkty (jeżeli dłuższa o jedną regułę)
+
+– jeżeli zachodzą oba powyższe (zły typ i w dodatku za długa) to
+  minimum z powyższych dwóch minus 1 punkt
+
+Klucz do zadania 2:
+
+– wyrażenie regularne generujące zły język: 0 punktów
+
+– wyrażenie regulrane generujące dobry język ale dłuższe niż to było
+  potrzebne: 4 lub 3 punkty
+
+

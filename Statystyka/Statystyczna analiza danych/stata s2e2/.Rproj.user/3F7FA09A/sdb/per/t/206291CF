@@ -1,0 +1,21 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1507879564583.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "206291CF",
+    "lastKnownWriteTime" : 5,
+    "last_content_update" : 1507879564583,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "context" : ".GlobalEnv:::compareDensEst"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_code_browser"
+}
